@@ -13,18 +13,15 @@ const FooterPage = () => {
             Enter-Stream
           </Link>
           <div className="flex items-center space-x-4">
-            <Link to="/movies" className="text-2xl hover:text-indigo-500">
+            <Link to="/movies" className="text-base hover:text-indigo-500">
               MOVIES
             </Link>
-            <Link to="/series" className="text-2xl hover:text-indigo-500">
+            <Link to="/series" className="text-base hover:text-indigo-500">
               SERIES
             </Link>
           </div>
           {/* Right Section */}
-          <Link
-            to="#"
-            className="text-2xl hover:text-indigo-600 text-black px-4 py-2"
-          >
+          <Link to="#" className="text-base hover:text-indigo-600 text-black ">
             SUBSCRIBE
           </Link>
         </div>

@@ -9,7 +9,7 @@ const NavBar = () => {
           {/* Left Section */}
           <NavLink
             to="/"
-            className="flex items-center text-2xl hover:text-indigo-500"
+            className="flex items-center text-xl hover:text-indigo-500"
           >
             <span className="text-indigo-500">Enter-</span>
             Stream
@@ -17,10 +17,10 @@ const NavBar = () => {
 
           {/* Center Section */}
           <div className="flex items-center space-x-4">
-            <NavLink to="/movies" className="text-2xl hover:text-indigo-500">
+            <NavLink to="/movies" className="text-base hover:text-indigo-500">
               MOVIES
             </NavLink>
-            <a href="/series" className="text-2xl hover:text-indigo-500">
+            <a href="/series" className="text-base hover:text-indigo-500">
               SERIES
             </a>
           </div>
@@ -28,7 +28,7 @@ const NavBar = () => {
           {/* Right Section */}
           <a
             href="#"
-            className="text-2xl  h-auto bg-indigo-500 hover:bg-indigo-600 text-white text-center px-4 py-2 rounded-lg"
+            className="text-base  h-auto bg-indigo-500 hover:bg-indigo-900 text-white text-center px-4 py-2 rounded-3xl"
           >
             SUBSCRIBE
           </a>

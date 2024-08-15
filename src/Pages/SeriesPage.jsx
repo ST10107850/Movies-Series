@@ -1,10 +1,10 @@
-import SeriesHero from "../components/SeriesHero";
+import Hero from "../components/Hero";
 import SeriesListing from "../components/SeriesListing";
 
 const SeriesPage = () => {
   return (
     <div>
-      <SeriesHero />
+     <Hero title="LATEST SERIES"/>
       <SeriesListing />
     </div>
   );

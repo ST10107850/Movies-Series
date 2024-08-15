@@ -1,5 +1,6 @@
-import UpdateMovieHero from "../components/UpdateMovieHero";
+
 import UpdateMovie from "../components/UpdateMovie";
+import Hero from "../components/Hero";
 
 const EditMoviePage = () => {
   //Update movie
@@ -23,7 +24,7 @@ const EditMoviePage = () => {
 
   return (
     <div>
-      <UpdateMovieHero />
+      <Hero title="UPDATE A MOVIE/SERIES"/>
       <UpdateMovie UpdateMovies={UpdateMovies} />
     </div>
   );

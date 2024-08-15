@@ -1,4 +1,5 @@
-import AddNewHero from "../components/AddNewHero";
+
+import Hero from "../components/Hero";
 import MoviesForm from "../components/MoviesForm";
 
 const AddNewPage = () => {
@@ -16,7 +17,7 @@ const AddNewPage = () => {
 
   return (
     <div>
-      <AddNewHero />
+      <Hero title="ADD A MOVIE/SERIES"/>
       <MoviesForm addMovieOrseries={addNew} />
     </div>
   );
