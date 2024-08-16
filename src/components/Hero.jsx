@@ -7,7 +7,7 @@ const Hero = ({ title }) => {
       className="relative h-[120px] w-full bg-cover bg-center bg-no-repeat md:h-[210px] sm:h-[170px] lg:h-[400px] flex justify-center items-center"
       style={{ backgroundImage: `url(${background})` }}
     >
-      <h1 className="text-white font-bold sm:text-xl lg:text-3xl md:text-2xl">{title}</h1>
+      <h1 className="text-white font-bold  lg:text-3xl sm:text-2xl">{title}</h1>
     </div>
   ); 
 };
