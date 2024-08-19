@@ -4,7 +4,6 @@ import Spinner from "./Spinner";
 
 const MoviesListing = ({ isHome = false }) => {
   const [movies, setMovies] = useState([]);
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -13,7 +12,7 @@ const MoviesListing = ({ isHome = false }) => {
       try {
         const res = await fetch(apiUrl);
         const data = await res.json();
-        console.log("Fetched data:", data); // Log the data
+        console.log("Fetched data:", data);
 
         // Ensure the structure of data before filtering
         const moviesArray = Array.isArray(data.movies) ? data.movies : data;
@@ -34,10 +33,10 @@ const MoviesListing = ({ isHome = false }) => {
 
   return (
     <div>
-      <section className="px-4 py-10 max-md:">
-        <div className="container-xl lg:container m-auto">
+      <section className="px-4 py-10">
+        <div className="container xl:container lg:container m-auto">
           {isHome ? (
-            <h2 className="text-base  mb-12 text-center">LATEST MOVIES</h2>
+            <h2 className="text-base mb-12 text-center">LATEST MOVIES</h2>
           ) : (
             <div className="mt-4 mb-5 pb-3 flex justify-end">
               <Link
@@ -53,13 +52,13 @@ const MoviesListing = ({ isHome = false }) => {
             <Spinner loading={loading} />
           ) : (
             <div className="flex justify-center">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:grid-cols-2 sm:gap-16 lg:grid-cols-4">
+              {/* Adjusted grid to show 2 cards on mobile with smaller images */}
+              <div className={`grid grid-cols-2 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4`}>
                 {movies.length > 0 ? (
                   movies.map((movie) => (
                     <div
                       key={movie.id}
-                      className="bg-white  shadow-md overflow-hidden"
-                      style={{ height: "250px", width: "200px" }}
+                      className="bg-white shadow-md overflow-hidden sm:w-[210px] sm:h-[300px]"
                     >
                       <Link to={`/movies/${movie.id}`}>
                         <img

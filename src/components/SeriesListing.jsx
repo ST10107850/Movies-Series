@@ -32,7 +32,7 @@ const SeriesListing = ({ isHome = false }) => {
       <section className="px-4 py-10">
         <div className="container-xl lg:container m-auto">
           {isHome ? (
-            <h2 className="text-base  mb-12 text-center">LATEST SERIES</h2>
+            <h2 className="text-base mb-12 text-center">LATEST SERIES</h2>
           ) : (
             <div className="mt-4 mb-5 pb-3 flex justify-end">
               <Link
@@ -43,14 +43,15 @@ const SeriesListing = ({ isHome = false }) => {
               </Link>
             </div>
           )}
+
           <div className="flex justify-center">
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:grid-cols-2 sm:gap-14">
+            {/* Adjusted grid to show images filling the blocks */}
+            <div className="grid grid-cols-2 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {series.length > 0 ? (
                 series.map((movie) => (
                   <div
                     key={movie.id}
-                    className="bg-white  shadow-md overflow-hidden"
-                    style={{ height: "250px", width: "200px" }}
+                    className="bg-white shadow-md overflow-hidden sm:w-[210px] sm:h-[300px]"
                   >
                     <Link to={`/movies/${movie.id}`}>
                       <img
@@ -68,6 +69,7 @@ const SeriesListing = ({ isHome = false }) => {
               )}
             </div>
           </div>
+
           {isHome && (
             <div className="mt-4 mb-5 pb-3 flex justify-end lg:mr-72 sm:mr-36 md:mr-52">
               <Link
