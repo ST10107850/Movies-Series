@@ -41,13 +41,6 @@ const UpdateMovie = ({ UpdateMovies }) => {
   const fileInputRef = useRef(null);
   const navigate = useNavigate();
 
-  // Load genre options from a JSON file
-  useEffect(() => {
-    fetch("/path/to/your/genres.json")
-      .then((response) => response.json())
-      .then((data) => setGenreOptions(data))
-      .catch((error) => console.error("Error fetching genre options:", error));
-  }, []);
 
   const handleCheckboxChange = (e) => {
     const { value, checked } = e.target;
